@@ -26,17 +26,19 @@ export default function CommonLayout(props: { children: JSX.Element | JSX.Elemen
     return (
         <>
             <main className={`${props.className} flex min-h-screen font-quicksand`}>
-                <div className="w-[365px] bg-bg-nav flex flex-col items-center justify-center">
-                    <Link href="/" className=" text-link uppercase text-2xl m-12">junaverse</Link>
-                    <ul className="flex flex-col">
-                        {routes.map((route) => <RouteLink route={route} key={route.link}/>)}
-                    </ul>
+                <div className="flex w-[365px] bg-bg-nav">
+                    <div className="h-screen w-[365px] flex flex-col items-center justify-center fixed">
+                        <Link href="/" className=" text-link uppercase text-2xl m-12">junaverse</Link>
+                        <ul className="flex flex-col">
+                            {routes.map((route) => <RouteLink route={route} key={route.link}/>)}
+                        </ul>
+                    </div>
                 </div>
                 <div className="flex-1 bg-bg-page">
                     {props.children}
+                    <Footer/>
                 </div>
             </main>
-            <Footer/>
         </>
     )
 }

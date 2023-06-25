@@ -19,8 +19,16 @@ module.exports = {
                 "bg-nav": "#272A37",
                 "link": "#CECECE",
                 "bg-page": "#292D3E",
-            }
+                "primary": "#FCA7EA",
+            },
+            letterSpacing: {
+                "snug": "0.7em",
+            },
         },
     },
     plugins: [],
+    safelist: [
+        "border-primary",
+        "text-primary"
+    ],
 }
