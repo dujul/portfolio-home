@@ -1,22 +1,14 @@
 import Category from "~/components/Category";
 import Chip from "~/components/Chip";
-import ReactIcon from "~/components/icons/ReactIcon";
 import ProgressBar from "~/components/structures/ProgressBar";
+import {FrameworkData, FRAMEWORKS} from "~/model/FrameworkData";
 
 export default function Home() {
     return (
         <div>
             <Category name="Frameworks" color="primary">
                 <div className="flex flex-wrap justify-center">
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
-                    <Chip icon={<ReactIcon className="h-[40px] w-[40px]"/>} name="React"/>
+                    {FRAMEWORKS.map((value, i) => <Framework key={i} value={value}/>)}
                 </div>
             </Category>
             <Category name="Frameworks" color="primary">
@@ -28,4 +20,8 @@ export default function Home() {
             </Category>
         </div>
     )
+}
+
+function Framework(props: { value: FrameworkData }) {
+    return <Chip icon={props.value.icon} name={props.value.name}/>
 }
