@@ -1,3 +1,6 @@
+import SearchablePage from "~/components/search/SearchablePage";
+import {PROTOTYPES} from "~/model/prototypes-data";
+
 export default function Prototypes() {
-    return <div>Prototypes</div>
+    return <SearchablePage data={PROTOTYPES}/>
 }

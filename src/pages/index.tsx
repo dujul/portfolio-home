@@ -8,7 +8,7 @@ export default function Home() {
         <div>
             <Category name="Frameworks" color="primary">
                 <div className="flex flex-wrap justify-center">
-                    {FRAMEWORKS.map((value, i) => <Framework key={i} value={value}/>)}
+                    {FRAMEWORKS.map((value, i) => <Framework key={value.id} value={value}/>)}
                 </div>
             </Category>
             <Category name="Frameworks" color="primary">
