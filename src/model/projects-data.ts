@@ -5,15 +5,15 @@ export const PROJECTS: SearchableType[] = [
     {
         id: "test",
         name: "testing",
-        tags: ["test"],
+        tags: ["vue"],
         image: "../public/test.png",
         descr: "test",
         link: "string"
     },
     {
-        id: "test",
+        id: "test2",
         name: "test this",
-        tags: ["test"],
+        tags: ["react"],
         image: "",
         descr: "test",
         link: "string"
