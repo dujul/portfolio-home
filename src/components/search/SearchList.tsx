@@ -8,8 +8,7 @@ type SearchListProps = {
 
 export default function SearchList(props: SearchListProps) {
 
-    return <div>
-        {props.data.length}
+    return <div className={"mt-5"}>
         <div className="flex flex-wrap">
             {props.data.map((value, i) => <Projects key={value.id} value={value}/>)}
         </div>

@@ -9,5 +9,5 @@ type ClickableCapsuleProps = {
 export default function ClickableCapsule(props: ClickableCapsuleProps) {
     const data = getTagData(props.tag)
 
-    return <span className={"capsule text-bg-page"} style={{background: data.color}} onClick={() => props.onClick()}>{data.name}</span>
+    return <span className={"capsule text-bg-page select-none"} style={{background: data.color}} onClick={() => props.onClick()}>{data.name}</span>
 }

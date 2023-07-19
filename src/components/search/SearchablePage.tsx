@@ -8,6 +8,9 @@ type SearchablePageProps = {
 }
 
 export default function SearchablePage(props: SearchablePageProps) {
+    const collectedTags = [...new Set(props.data.flatMap((value) => value.tags))];
+    collectedTags.sort();
+
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
     let filteredList = props.data;
@@ -18,7 +21,7 @@ export default function SearchablePage(props: SearchablePageProps) {
         })
     }
     return <div>
-        <SearchInput tags={["test", "react", "vue", "next"]} selectedTags={selectedTags} setSelectedTags={setSelectedTags}/>
+        <SearchInput tags={collectedTags} selectedTags={selectedTags} setSelectedTags={setSelectedTags}/>
         <SearchList data={filteredList}/>
     </div>
 }

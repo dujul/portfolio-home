@@ -1,4 +1,5 @@
 import ClickableCapsule from "~/components/search/ClickableCapsule";
+import "./SearchInput.css"
 
 type SearchInputProps = {
     className?: string,
@@ -23,10 +24,13 @@ export default function SearchInput(props: SearchInputProps) {
 
     return (
         <div>
-            <div>
-                {selectedTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => removeFromList(tag)} />)}
+            <div className={"flex"}>
+                <div className={"tag-holder flex-1"}>
+                    {selectedTags.length === 0 && <p className={"mx-4 text-white select-none"}>Select a tag to filter...</p>}
+                    {selectedTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => removeFromList(tag)} />)}
+                </div>
+                <button className={`mr-5 ${selectedTags.length === 0 ? "cursor-not-allowed" : ""}`} onClick={() => setSelectedTags([])}>Clear search</button>
             </div>
-            <button onClick={() => setSelectedTags([])}>Clear search</button>
             <div>
                 {filteredTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => addToList(tag)} />)}
             </div>
