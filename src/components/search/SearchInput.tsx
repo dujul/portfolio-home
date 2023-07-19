@@ -1,6 +1,7 @@
-import {useState} from "react";
+import ClickableCapsule from "~/components/search/ClickableCapsule";
 
 type SearchInputProps = {
+    className?: string,
     tags: string[],
     selectedTags: string[],
     setSelectedTags: (tags: string[]) => void;
@@ -33,11 +34,3 @@ export default function SearchInput(props: SearchInputProps) {
     )
 }
 
-type ClickableCapsuleProps = {
-    tag: string,
-    onClick: () => void,
-}
-
-function ClickableCapsule(props: ClickableCapsuleProps) {
-    return <span onClick={() => props.onClick()}>{props.tag}</span>
-}

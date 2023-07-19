@@ -1,0 +1,12 @@
+.capsule {
+    font-weight: bold;
+    padding: .3rem .8rem;
+    margin: 4px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: filter 100ms;
+}
+
+.capsule:hover {
+    filter: brightness(0.7);
+}

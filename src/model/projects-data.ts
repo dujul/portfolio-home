@@ -3,10 +3,10 @@ import {SearchableType} from "~/model/SearchableType";
 
 export const PROJECTS: SearchableType[] = [
     {
-        id: "test",
+        id: "testing",
         name: "testing",
         tags: ["vue"],
-        image: "../public/test.png",
+        image: "../test.png",
         descr: "test",
         link: "string"
     },
@@ -14,7 +14,7 @@ export const PROJECTS: SearchableType[] = [
         id: "test2",
         name: "test this",
         tags: ["react"],
-        image: "",
+        image: "https://images.pexels.com/photos/2246789/pexels-photo-2246789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         descr: "test",
         link: "string"
     },
