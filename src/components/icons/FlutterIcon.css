@@ -1,0 +1,31 @@
+.st0 {
+    fill: #47C5FB;
+}
+
+.st1 {
+    fill: url(#SVGID_1_);
+    fill-opacity: 0.8;
+}
+
+.st2 {
+    fill: #00569E;
+}
+
+.st3 {
+    fill: #00B5F8;
+}
+
+
+
+.stop-color {
+    stop-color:#000000;
+}
+
+.stop {
+    color:#000000;
+    opacity:0;
+}
+
+.enable-background {
+    color: rgba(0, 0, 256, 317);
+}
