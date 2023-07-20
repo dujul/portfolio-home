@@ -31,7 +31,7 @@ export default function SearchInput(props: SearchInputProps) {
                 </div>
                 <button className={`mr-5 ${selectedTags.length === 0 ? "cursor-not-allowed" : ""}`} onClick={() => setSelectedTags([])}>Clear search</button>
             </div>
-            <div>
+            <div className={"flex flex-wrap"}>
                 {filteredTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => addToList(tag)} />)}
             </div>
         </div>

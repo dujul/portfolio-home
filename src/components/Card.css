@@ -2,7 +2,6 @@
     position: relative;
     transition: transform 100ms;
     cursor: pointer;
-    margin: 1rem;
     overflow: hidden;
 }
 

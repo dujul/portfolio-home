@@ -7,7 +7,7 @@ type CardProps = {
 }
 
 export default function Card({data}: CardProps) {
-    return <div className={"card w-full max-w-[350px] h-[180px] bg-link shadow rounded-lg select-none"}>
+    return <div className={"card w-full max-w-[350px] h-[180px] bg-link shadow rounded-lg select-none m-1 lg:m-[1rem]"}>
         <img src={data.image} alt={"image"} className={"absolute w-full h-full object-cover"}/>
         <div className={"content"}>
             <div className={"relative flex flex-col w-full h-full bg-gradient-to-b from-slate-900/70 to-transparent text-white"}>

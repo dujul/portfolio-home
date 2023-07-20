@@ -15,3 +15,11 @@
 .active-navbar {
     position: relative;
 }
+
+.mobile-navbar-area {
+    transition: transform 400ms;
+    transform: translateX(-100%);
+}
+.mobile-navbar-area.open {
+    transform: translateX(0%);
+}
