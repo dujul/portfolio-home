@@ -9,7 +9,7 @@ type SearchListProps = {
 export default function SearchList(props: SearchListProps) {
 
     return <div className={"mt-5"}>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-center">
             {props.data.map((value, i) => <Projects key={value.id} value={value}/>)}
         </div>
     </div>
