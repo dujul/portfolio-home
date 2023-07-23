@@ -5,7 +5,7 @@ import SpringIcon from "~/components/icons/SpringIcon";
 import NextJsIcon from "~/components/icons/NextjsIcon";
 import AndroidIcon from "~/components/icons/AndroidIcon";
 import FlutterIcon from "~/components/icons/FlutterIcon";
-import LatexIcon from "~/components/icons/LatexIcon";
+import JsfIcon from "~/components/icons/JsfIcon";
 
 export type FrameworkData = {
     icon: JSX.Element,
@@ -50,9 +50,9 @@ export const FRAMEWORKS: FrameworkData[] = [
         icon: <FlutterIcon className="h-[40px] w-[40px]"/>,
     },
     {
-        id: "latex",
-        name: "Latex",
-        icon: <LatexIcon className="h-[40px] w-[40px]"/>,
+        id: "jsf",
+        name: "JSF",
+        icon: <JsfIcon className="h-[40px] w-[40px]"/>,
     },
 ]
 

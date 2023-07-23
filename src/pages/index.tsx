@@ -2,21 +2,20 @@ import Category from "~/components/Category";
 import Chip from "~/components/Chip";
 import ProgressBar from "~/components/structures/ProgressBar";
 import {FrameworkData, FRAMEWORKS} from "~/model/FrameworkData";
+import {PROGRESS_DATA} from "~/model/progress-data";
 
 export default function Home() {
     return (
-        <div>
+        <div className={"md:min-h-screen"}>
             <Category name="Frameworks" color="primary">
                 <div className="flex flex-wrap justify-center">
-                    {FRAMEWORKS.map((value, i) => <Framework key={value.id} value={value}/>)}
+                    {FRAMEWORKS.map((value) => <Framework key={value.id} value={value}/>)}
                 </div>
             </Category>
-            <Category name="Frameworks" color="primary">
-                <ProgressBar name="React" className="w-40 h-5" input={15}/>
-                <ProgressBar name="React" className="w-40 h-5" input={15}/>
-            </Category>
-            <Category name="Frameworks" color="primary">
-                <p className="h-[600px]">Text</p>
+            <Category name="Languages" color="primary">
+                <div className={"pl-[15px] md:px-4 lg:flex flex-wrap justify-evenly"}>
+                    {PROGRESS_DATA.map(value => <ProgressBar key={value.name} name={value.name} input={value.progress} className={"my-8 lg:w-[40%]"}/>)}
+                </div>
             </Category>
         </div>
     )
