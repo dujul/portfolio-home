@@ -1,12 +1,15 @@
 type SocialProps = {
     name?: string,
     icon: JSX.Element,
+    className?: string,
+    link: string,
+    onClick: () => void
 }
 
 export default function Socials(props: SocialProps) {
     return (
-        <div className="bg-link w-[30px] h-[30px] rounded-full flex p-1 m-2">
-            {props.icon}
-        </div>
+        <a href={props.link}>
+            <button className="w-[35px] h-[35px] rounded-full flex m-2">{props.icon}</button>
+        </a>
     )
 }

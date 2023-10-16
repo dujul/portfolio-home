@@ -13,8 +13,7 @@ export default function Category(props: CategoryProps) {
         <div className="flex">
             <div className="flex flex-col items-center">
                 <h2 className={`text-${props.color} leading-snug break-all w-3`}>{props.name.substring(1)}</h2>
-                <div
-                    className={`line min-h-[30px] w-0 flex-1 my-5 border-solid border-r-2 border-${props.color}`}></div>
+                <div className={`line min-h-[30px] w-0 flex-1 my-5 border-solid border-r-2 border-${props.color}`}></div>
             </div>
             <div className="w-full">{props.children}</div>
         </div>

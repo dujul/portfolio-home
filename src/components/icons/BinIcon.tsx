@@ -1,0 +1,9 @@
+export default function BinIcon(props: { className?: string }) {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className={props.className}>
+        <g fill="none">
+            <path opacity=".3" d="M8 9h8v10H8V9z" fill="#ffffff"></path>
+            <path d="M15.5 4l-1-1h-5l-1 1H5v2h14V4h-3.5zM6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9z"
+                fill="#ffffff"></path>
+        </g>
+    </svg>
+}
