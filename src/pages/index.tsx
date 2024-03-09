@@ -3,6 +3,7 @@ import Chip from "~/components/Chip";
 import ProgressBar from "~/components/structures/ProgressBar";
 import {FrameworkData, FRAMEWORKS} from "~/model/FrameworkData";
 import {PROGRESS_DATA} from "~/model/progress-data";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -22,5 +23,7 @@ export default function Home() {
 }
 
 function Framework(props: { value: FrameworkData }) {
-    return <Chip icon={props.value.icon} name={props.value.name}/>
+    return <Link href={"/projects?tags="+props.value.id}>
+        <Chip icon={props.value.icon} name={props.value.name}/>
+    </Link>
 }
