@@ -57,6 +57,9 @@ const tagData: {
     },
 }
 
+export function getTagDataOrNull(id: string): TagData | null {
+    return tagData[id] || null;
+}
 export function getTagData(id: string): TagData {
     return tagData[id] || {name: id, color: "red"}
 }
