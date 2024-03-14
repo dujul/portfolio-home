@@ -11,16 +11,3 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.navbar {
-    height: 100vh;
-    width: 30%;
-    background: #2C2C2C;
-}
-
-.text {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding-left: 30px;
-}

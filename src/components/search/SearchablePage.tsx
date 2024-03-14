@@ -24,7 +24,10 @@ export default function SearchablePage(props: SearchablePageProps) {
 
     // load tags from query params
     useEffect(() => {
-        if (!preSelectedTags) return;
+        if (!preSelectedTags) {
+            setSelectedTags([]);
+            return;
+        }
         setSelectedTags(
             preSelectedTags
                 .split(",")
@@ -42,6 +45,10 @@ export default function SearchablePage(props: SearchablePageProps) {
         [searchParams]
     )
     const saveSelectedTags = (newTags: string[]) => {
+        if (newTags.length === 0) {
+            router.push(pathname!);
+            return;
+        }
         router.push(pathname + "?" + createQueryString("tags", newTags.join(",")))
     }
 

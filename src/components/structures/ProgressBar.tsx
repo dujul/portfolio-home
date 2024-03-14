@@ -15,15 +15,15 @@ export default function ProgressBar(props: Props) {
         if (current === percentage) {
             percentage++;
         }
-        dividers.push(<div key={i} className={`border border-solid ${current <= percentage ? "border-[#525252]" : "border-[#E7E6E6]"}`}></div>);
+        dividers.push(<div key={i} className={`border border-solid ${current <= percentage ? "border-bg-page" : "border-secondary"}`}></div>);
     }
     return (
-        <div className={`${props.className} flex justify-evenly m-3 text-link`}>
+        <div className={`${props.className} flex justify-evenly m-3 text-content`}>
             <h2 className={"w-1/3 max-w-[150px]"}>{props.name}</h2>
-            <div className={"relative rounded-full overflow-hidden bg-[#525252] flex-1 h-5"}>
+            <div className={"relative rounded-full overflow-hidden bg-progressbar flex-1 h-5"}>
                 <div style={{
                     width: percentage + "%"
-                }} className="h-full bg-primary"></div>
+                }} className="h-full bg-secondary"></div>
                 <div className="w-full h-full flex justify-between absolute top-0">
                     <div></div>
                     {dividers}

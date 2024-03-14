@@ -19,20 +19,20 @@ export default function SearchInput(props: SearchInputProps) {
         setSelectedTags([...selectedTags, tag]);
     }
     const removeFromList = (tag: string) => {
-        setSelectedTags(selectedTags.filter((thisTag) => thisTag !== tag))
+        setSelectedTags(selectedTags.filter((thisTag) => thisTag !== tag));
     }
 
 
     return (
         <div>
             <div className={"flex"}>
-                <div className={"tag-holder flex-1"}>
-                    {selectedTags.length === 0 && <p className={"mx-4 text-white select-none"}>Select a tag to filter...</p>}
+                <div className={"tag-holder bg-bg-nav flex-1 bg-opacity-25"}>
+                    {selectedTags.length === 0 && <p className={"mx-4 text-link select-none"}>Select a tag to filter...</p>}
                     {selectedTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => removeFromList(tag)} />)}
                 </div>
                 <button className={`mr-5 ${selectedTags.length === 0 ? "cursor-not-allowed" : ""}`} onClick={() => setSelectedTags([])}><BinIcon/></button>
             </div>
-            <div className={"flex flex-wrap"}>
+            <div className={"flex flex-wrap mx-8"}>
                 {filteredTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => addToList(tag)} />)}
             </div>
         </div>

@@ -24,7 +24,7 @@ for (let i = 0; i < 11; i++) {
         {
             id: "test-" + i,
             name: "test",
-            tags: ["test"],
+            tags: [],
             image: "https://images.pexels.com/photos/2246789/pexels-photo-2246789.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             descr: "test",
             link: "test"

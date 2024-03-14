@@ -17,10 +17,15 @@ module.exports = {
                 quicksand: ["var(--font-quicksand)"],
             },
             colors: {
-                "bg-nav": "#272A37",
-                "link": "#CECECE",
-                "bg-page": "#292D3E",
-                "primary": "#FCA7EA",
+                "bg-nav": "#1e3a8a",
+                "link": "#FFFFF5",
+                "bg-page": "#030014",
+                "primary": "#f4f0ff",
+                "secondary": "#838DA5",
+                "title-color":"#8a9dd1",
+                "content":"#1e3a8a",
+                "chip":"#1e3a8a",
+                "progressbar":"#1e3a8a",
             },
             letterSpacing: {
                 "snug": "0.7em",
@@ -30,6 +35,7 @@ module.exports = {
     plugins: [],
     safelist: [
         "border-primary",
-        "text-primary"
+        "text-primary",
+        "primary"
     ],
 }
