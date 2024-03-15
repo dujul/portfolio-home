@@ -52,6 +52,14 @@ export default function SearchablePage(props: SearchablePageProps) {
         router.push(pathname + "?" + createQueryString("tags", newTags.join(",")))
     }
 
+    const addTag = (newTag: string) => {
+        if (selectedTags.indexOf(newTag) !== -1) {
+            return;
+        }
+        saveSelectedTags([...selectedTags, newTag]);
+    }
+
+
     if (selectedTags.length > 0) {
         filteredList = filteredList.filter(value => {
             return !!value.tags.find((tag) => selectedTags.indexOf(tag) >= 0)
@@ -59,6 +67,6 @@ export default function SearchablePage(props: SearchablePageProps) {
     }
     return <div>
         <SearchInput tags={collectedTags} selectedTags={selectedTags} setSelectedTags={saveSelectedTags}/>
-        <SearchList data={filteredList}/>
+        <SearchList data={filteredList} addTag={addTag}/>
     </div>
 }

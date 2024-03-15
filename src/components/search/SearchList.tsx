@@ -2,7 +2,8 @@ import {SearchableType} from "~/model/SearchableType";
 import Card from "~/components/Card";
 
 type SearchListProps = {
-    data: SearchableType[]
+    data: SearchableType[],
+    addTag?: (newTag: string) => void
 }
 
 
@@ -10,11 +11,11 @@ export default function SearchList(props: SearchListProps) {
 
     return <div className={"mt-5"}>
         <div className="flex flex-wrap justify-center">
-            {props.data.map((value, i) => <Projects key={value.id} value={value}/>)}
+            {props.data.map((value, i) => <Project key={value.id} value={value} addTag={props.addTag} />)}
         </div>
     </div>
 }
 
-function Projects(props: { value: SearchableType }) {
-    return <Card data={props.value}></Card>
+function Project(props: { value: SearchableType, addTag?: (newTag: string) => void }) {
+    return <Card data={props.value} addTag={props.addTag}></Card>
 }

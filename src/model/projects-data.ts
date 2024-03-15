@@ -6,7 +6,7 @@ export const PROJECTS: SearchableType[] = [
         id: "portfolio",
         name: "My Portfolio Page",
         tags: ["next", "react", "css", "typescript", "tailwind"],
-        image: "../test.png",
+        image: "../portfolio.png",
         descr: "This is my portfolio page. You are currently viewing it. Take a look at all the cool projects and designs I've created.",
         link: "string"
     },

@@ -1,15 +1,15 @@
-import ReactIcon from "~/components/icons/ReactIcon";
-import NextJsIcon from "~/components/icons/NextjsIcon";
+import ReactIcon from "~/components/icons/gradient/ReactIcon";
+import NextJsIcon from "~/components/icons/gradient/NextjsIcon";
 import FlutterIcon from "~/components/icons/FlutterIcon";
-import GitIcon from "~/components/icons/GitIcon";
+import GitIcon from "~/components/icons/gradient/GitIcon";
 import JsfIcon from "~/components/icons/JsfIcon";
-import TailwindIcon from "~/components/icons/TailwindIcon";
-import AndroidIcon from "~/components/icons/AndroidIcon";
-import CssIcon from "~/components/icons/CssIcon";
+import TailwindIcon from "~/components/icons/gradient/TailwindIcon";
+import AndroidIcon from "~/components/icons/gradient/AndroidIcon";
+import CssIcon from "~/components/icons/gradient/CssIcon";
 import TypescriptIcon from "~/components/icons/TypescriptIcon";
-import JavascriptIcon from "~/components/icons/JavascriptIcon";
-import HtmlIcon from "~/components/icons/HtmlIcon";
-import JavaIcon from "~/components/icons/JavaIcon";
+import JavascriptIcon from "~/components/icons/gradient/JavascriptIcon";
+import HtmlIcon from "~/components/icons/gradient/HtmlIcon";
+import JavaIcon from "~/components/icons/gradient/JavaIcon";
 
 export type TagData = {
     name: string,

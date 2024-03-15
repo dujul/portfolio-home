@@ -1,3 +1,15 @@
+.card-toolbar {
+    opacity: 0;
+}
+
+.card-toolbar:hover {
+    opacity:1 !important;
+}
+
+.card-wrapper:hover > .card-toolbar {
+    opacity: .4;
+}
+
 .card {
     position: relative;
     transition: transform 100ms;

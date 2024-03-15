@@ -9,10 +9,10 @@
 
 .capsule.mini {
     font-weight: bold;
-    padding: .1rem .5rem;
+    padding: .2rem;
     font-size: 0.7rem;
     margin: 2px;
-    border-radius: 1rem;
+    border-radius: 50%;
 }
 
 .capsule:hover {
