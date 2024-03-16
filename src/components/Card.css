@@ -1,3 +1,7 @@
+.card {
+    cursor: pointer;
+}
+
 .card-toolbar {
     opacity: 0;
 }
@@ -6,32 +10,31 @@
     opacity:1 !important;
 }
 
-.card-wrapper:hover > .card-toolbar {
+.card-wrapper:hover .card-toolbar {
     opacity: .4;
 }
 
-.card {
+.card-image {
     position: relative;
     transition: transform 100ms;
-    cursor: pointer;
     overflow: hidden;
 }
 
-.card:hover {
-    transform: scale(1.1);
+.card-image:hover {
+    transform: scale(1);
 }
-.card > .content {
+.card-image > .content {
     transition: opacity 300ms;
     position: relative;
     width: 100%;
     height: 100%;
     opacity: 1;
 }
-.card:hover > .content {
+.card-image:hover > .content {
     opacity: 0;
 }
 
-.card > .overlay {
+.card-image > .overlay {
     opacity: 0;
     transition: opacity 300ms;
     position: absolute;
@@ -47,11 +50,11 @@
 }
 
 
-.card:hover > .overlay {
+.card-image:hover > .overlay {
     opacity: 1;
 }
 
-.card > .overlay > .description {
+.card-image > .overlay > .description {
     font-weight: bold;
     margin: 1rem;
     text-align: center;
