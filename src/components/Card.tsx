@@ -9,7 +9,7 @@ type CardProps = {
 
 export default function Card({data, addTag}: CardProps) {
     return <div className={"card-wrapper w-full max-w-[400px] h-[310px] select-none m-1 lg:m-[1.5rem] relative"}>
-        <div className={"bg-gradient-to-b from-gradient-start to-gradient-end h-full w-full rounded-lg p-1"}>
+        <div className={"bg-gradient-to-b from-gradient-start/80 to-gradient-end/80 h-full w-full rounded-lg p-0.5"}>
             <a href={data.link} target={"_blank"} className={"card flex flex-col w-full h-full bg-bg-page rounded-lg p-2 "}>
                 <CardImage data={data}/>
                 <div className={"card-body flex-1 text-primary flex justify-center items-center text-lg font-bold bg-title-color bg-opacity-10 rounded-b-lg"}>
