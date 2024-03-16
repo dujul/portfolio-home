@@ -26,6 +26,8 @@ module.exports = {
                 "content":"#1e3a8a",
                 "chip":"#1e3a8a",
                 "progressbar":"#1e3a8a",
+                "gradient-start":"#E6ABFF",
+                "gradient-end":"#1A6DFF",
             },
             letterSpacing: {
                 "snug": "0.7em",
