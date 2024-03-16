@@ -30,7 +30,7 @@ export default function ClickableCapsule(props: ClickableCapsuleProps) {
             style={{background: data.color}}
             onClick={() => props.onClick?.()}
         >
-            {data.icon && <span className={"inline-block w-8 mr-2"}>
+            {data.icon && <span className={"inline-block w-8 h-8 mr-2"}>
                 {data.icon}
             </span>
             }

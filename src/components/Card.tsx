@@ -8,7 +8,7 @@ type CardProps = {
 }
 
 export default function Card({data, addTag}: CardProps) {
-    return <div className={"card-wrapper w-full max-w-[350px] h-[180px] select-none m-1 lg:m-[1rem] relative"}>
+    return <div className={"card-wrapper w-full max-w-[400px] h-[210px] select-none m-1 lg:m-[1.5rem] relative"}>
         <div className={"card w-full h-full bg-link shadow rounded-lg"}>
             <img src={data.image} alt={"image"} className={"absolute w-full h-full object-cover"}/>
             <div className={"content"}>

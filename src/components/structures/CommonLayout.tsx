@@ -3,6 +3,7 @@ import {usePathname} from "next/navigation";
 import Footer from "~/components/structures/Footer";
 import "./CommonLayout.css"
 import {useState} from "react";
+import MenuIcon from "~/components/icons/MenuIcon";
 
 type Route = {
     name: string,
@@ -26,7 +27,9 @@ export default function CommonLayout(props: { children: JSX.Element | JSX.Elemen
             <main className={`${props.className} flex min-h-screen font-quicksand`}>
                 <DesktopNavbar/>
                 <div className="flex-1 bg-bg-page">
-                    {props.children}
+                    <div className={"min-h-[88vh]"}>
+                        {props.children}
+                    </div>
                     <Footer/>
                 </div>
             </main>
@@ -51,11 +54,12 @@ function MobileNavbar() {
 
     return <div className="md:hidden bg-bg-nav h-20">
         <div className="z-50 fixed md:hidden bg-bg-nav h-20 w-full flex">
-            <button onClick={() => setOpen(!open)} className={"ml-3"}>Open</button>
+            <button onClick={() => setOpen(!open)} className={"ml-3"}><MenuIcon/></button>
         </div>
         <div
             className={`z-40 fixed mobile-navbar-area w-full h-full bg-bg-nav ${open ? "open" : "closed"} flex flex-col items-center justify-center`}>
-            <Link href="/" className=" text-link uppercase text-2xl m-12" onClick={() => setOpen(false)}>junaverse</Link>
+            <Link href="/" className=" text-link uppercase text-2xl m-12"
+                onClick={() => setOpen(false)}>junaverse</Link>
             <ul className="flex flex-col">
                 {routes.map((route) => <RouteLink route={route} key={route.link} onClick={() => setOpen(false)}/>)}
             </ul>

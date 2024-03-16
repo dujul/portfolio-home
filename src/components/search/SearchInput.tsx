@@ -25,15 +25,18 @@ export default function SearchInput(props: SearchInputProps) {
 
     return (
         <div>
-            <div className={"flex"}>
+            <div className={"flex w-[90%] m-auto"}>
                 <div className={"tag-holder bg-bg-nav flex-1 bg-opacity-25"}>
-                    {selectedTags.length === 0 && <p className={"mx-4 text-link select-none"}>Select a tag to filter...</p>}
-                    {selectedTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => removeFromList(tag)} />)}
+                    {selectedTags.length === 0 &&
+                        <p className={"mx-4 text-link text-opacity-70 select-none"}>Select a tag to filter...</p>}
+                    {selectedTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => removeFromList(tag)}/>)}
+                    <button
+                        className={`mr-5 pl-3 border-l border-secondary ml-auto ${selectedTags.length === 0 ? "cursor-not-allowed" : ""}`}
+                        onClick={() => setSelectedTags([])}><BinIcon/></button>
                 </div>
-                <button className={`mr-5 ${selectedTags.length === 0 ? "cursor-not-allowed" : ""}`} onClick={() => setSelectedTags([])}><BinIcon/></button>
             </div>
-            <div className={"flex flex-wrap mx-8"}>
-                {filteredTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => addToList(tag)} />)}
+            <div className={"flex flex-wrap mx-28"}>
+                {filteredTags.map((tag) => <ClickableCapsule key={tag} tag={tag} onClick={() => addToList(tag)}/>)}
             </div>
         </div>
     )

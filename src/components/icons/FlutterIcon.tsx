@@ -2,7 +2,7 @@ import "./FlutterIcon.css"
 
 export default function FlutterIcon(props: { className?: string }) {
     return <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px" y="0px" viewBox="0 0 256 317" xmlSpace="preserve" className={props.className}>
+        x="0px" y="0px" viewBox="0 0 317 317" xmlSpace="preserve" className={props.className}>
         <g><polygon className="st0" points="157.67,0 0,157.67 48.8,206.47 255.27,0"/>
             <polygon className="st0" points="156.57,145.4 72.15,229.82 121.13,279.53 169.84,230.82 255.27,145.4"/>
             <polygon className="st2" points="121.13,279.53 158.21,316.61 255.27,316.61 169.84,230.82"/>
