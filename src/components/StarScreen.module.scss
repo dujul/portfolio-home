@@ -1,0 +1,58 @@
+@use 'sass:list';
+
+$layer-count: 3; // Must equal js variable
+$star-count: 300, 140, 70; // EXPAND WITH $layer-count!!!!!
+$height-raw: 400;
+$height: #{$height-raw}px;
+
+.wrapper {
+  height: $height;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+@function multiple-box-shadow ($n) {
+  $value: '#{random(1000)}px #{random($height-raw)}px #FFF';
+  @for $i from 2 through $n {
+
+    $value: '#{$value} , #{random(2000)}px #{random($height-raw)}px #FFF';
+  }
+
+  @return unquote($value);
+}
+
+
+@for $i from 1 through $layer-count {
+  $shadows: multiple-box-shadow(list.nth($star-count, $i));
+
+  .star-layer-#{$i} {
+    width: #{$i}px;
+    height: #{$i}px;
+    background: transparent;
+    box-shadow: $shadows;
+    animation: animStar #{10 + $i * 10}s linear infinite;
+
+    &:after {
+      content: " ";
+      position: absolute;
+      top: $height;
+      width: #{$i}px;
+      height: #{$i}px;
+      background: transparent;
+      box-shadow: $shadows;
+    }
+  }
+}
+
+
+@keyframes animStar {
+
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-$height)
+  }
+}

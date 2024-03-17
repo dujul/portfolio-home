@@ -5,7 +5,7 @@ type CategoryProps = {
 }
 
 export default function Category(props: CategoryProps) {
-    return <div className="ml-8 my-8 max-w-[1000px]">
+    return <div className="ml-[7%] my-20 max-w-[1000px] relative">
         <div className="flex items-center">
             <h2 className={`text-${props.color} tracking-snug`}>{props.name}</h2>
             <div className={`line h-0 flex-1 mx-5 border-solid border-t-2 border-${props.color}`}></div>

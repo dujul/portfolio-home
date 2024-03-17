@@ -15,10 +15,6 @@ const routes: Route[] = [
         name: "My Projects",
         link: "/projects",
     },
-    {
-        name: "My Prototypes",
-        link: "/prototypes",
-    },
 ];
 export default function CommonLayout(props: { children: JSX.Element | JSX.Element[], className: string }) {
     return (

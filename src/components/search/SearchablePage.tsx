@@ -65,7 +65,7 @@ export default function SearchablePage(props: SearchablePageProps) {
             return !!value.tags.find((tag) => selectedTags.indexOf(tag) >= 0)
         })
     }
-    return <div>
+    return <div className={"relative"}>
         <SearchInput tags={collectedTags} selectedTags={selectedTags} setSelectedTags={saveSelectedTags}/>
         <SearchList data={filteredList} addTag={addTag}/>
     </div>

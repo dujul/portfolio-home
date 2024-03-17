@@ -6,26 +6,26 @@ export type ProgressData = {
 export const PROGRESS_DATA: ProgressData[] = [
     {
         name: "Java",
-        progress: 60
+        progress: 80
     },
     {
         name: "Javascript",
-        progress: 15
+        progress: 45
     },
     {
         name: "Typescript",
-        progress: 50
+        progress: 40
     },
     {
         name: "Dart",
-        progress: 100
+        progress: 50
     },
     {
         name: "Python",
-        progress: 15
+        progress: 22
     },
     {
         name: "HTML & CSS",
-        progress: 15
+        progress: 80
     },
 ]
