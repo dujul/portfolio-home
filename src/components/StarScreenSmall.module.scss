@@ -9,7 +9,7 @@ $height: #{$height-raw}px;
   height: $height;
   width: 100%;
   overflow: hidden;
-  position: relative;
+  position: absolute;
 }
 
 @function multiple-box-shadow ($n) {

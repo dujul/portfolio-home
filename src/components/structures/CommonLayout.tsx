@@ -20,9 +20,9 @@ export default function CommonLayout(props: { children: JSX.Element | JSX.Elemen
     return (
         <div className={"flex flex-col"}>
             <MobileNavbar/>
-            <main className={`${props.className} flex min-h-screen font-quicksand`}>
+            <main className={`${props.className} flex min-h-screen font-quicksand select-none`}>
                 <DesktopNavbar/>
-                <div className="flex-1 bg-bg-page">
+                <div className="flex-1 bg-bg-page relative">
                     <div className={"min-h-[88vh]"}>
                         {props.children}
                     </div>
