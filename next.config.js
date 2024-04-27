@@ -4,7 +4,7 @@ function getBasePath() {
     let basePath = "";
 
     if (isProd && process.env.BASE_PATH){
-        if (process.env.BASE_PATH.startsWith("/") ){
+        if (process.env.BASE_PATH.startsWith("/")){
             basePath = process.env.BASE_PATH;
         } else {
             basePath = "/" + process.env.BASE_PATH;
@@ -23,6 +23,9 @@ const nextConfig = {
     basePath: getBasePath(),
     images: {
         unoptimized: true,
+    },
+    env: {
+        BASE_PATH: getBasePath()
     }
 }
 

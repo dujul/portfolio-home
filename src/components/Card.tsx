@@ -1,6 +1,7 @@
 import {SearchableType} from "~/model/SearchableType";
 import "./Card.css"
 import ClickableCapsule from "~/components/search/ClickableCapsule";
+import {getCorrectImagePath} from "~/utils/ImagePath";
 
 type CardProps = {
     data: SearchableType,
@@ -22,8 +23,9 @@ export default function Card({data, addTag}: CardProps) {
 }
 
 function CardImage({data}: CardProps) {
+
     return <div className={"card-image w-full h-[230px] rounded-t-lg"}>
-        <img src={data.image} alt={"image"} className={"absolute w-full h-full object-cover"}/>
+        <img src={getCorrectImagePath(data.image)} alt={"image"} className={"absolute w-full h-full object-cover"}/>
         <div className={"overlay"}>
             <p className={"description"}>{data.descr}</p>
         </div>

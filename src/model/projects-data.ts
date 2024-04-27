@@ -6,7 +6,7 @@ export const PROJECTS: SearchableType[] = [
         id: "portfolio",
         name: "My Portfolio Page",
         tags: ["next", "react", "css", "typescript", "tailwind"],
-        image: "../portfolio.png",
+        image: "/portfolio.png",
         descr: "This is my portfolio page. You are currently viewing it. Take a look at all the cool projects and designs I've created.",
         link: "/"
     },
@@ -14,7 +14,7 @@ export const PROJECTS: SearchableType[] = [
         id: "uncured",
         name: "Uncured",
         tags: ["git"],
-        image: "../uncured.png",
+        image: "/uncured.png",
         descr: "Our newest Endrealm game we're currently working on. I'm doing QA and Level Design.",
         link: "https://store.steampowered.com/app/2204990/Uncured/"
     },
@@ -22,7 +22,7 @@ export const PROJECTS: SearchableType[] = [
         id: "wickborne",
         name: "Wickborne",
         tags: ["git"],
-        image: "../wickborne.png",
+        image: "/wickborne.png",
         descr: "This is a game made for the jame gam #36.",
         link: "https://disguisedgrandpa.itch.io/wickborne-jame-gam"
     },
