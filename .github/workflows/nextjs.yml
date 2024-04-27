@@ -61,6 +61,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
+        env:
+          BASE_PATH: "/portfolio-home"
         run: pnpm exec next build
 #      - name: Static HTML export with Next.js
 #        run: pnpm exec next export
