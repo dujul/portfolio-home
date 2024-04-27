@@ -11,9 +11,6 @@ function getBasePath() {
         }
     }
 
-    console.log("getBasePath() : isProd = " + isProd);
-    console.log("getBasePath() : basePath = " + basePath);
-
     return basePath
 }
 
